@@ -16,4 +16,17 @@ public class MainClassTest {
         Assert.assertTrue("Result is incorrect", actual > 45);
     }
 
+    @Test
+    public void testGetClassString() {
+        MainClass testObject = new MainClass();
+        String phrase = testObject.getClassString();
+        if (phrase.contains("Hello")) {
+            return;
+        }
+        if (phrase.contains("hello")) {
+            return;
+        }
+
+        Assert.fail("Phrase doesn't contain necessary words");
+    }
 }
